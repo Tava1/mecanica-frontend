@@ -53,6 +53,7 @@ export default function NovoCliente() {
           <input
             type="number"
             placeholder="Telefone"
+            value={telefone}
             onChange={e => setTelefone(e.target.value)}
           />
 

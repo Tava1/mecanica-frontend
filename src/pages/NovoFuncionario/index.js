@@ -55,12 +55,14 @@ export default function NovoFuncionario() {
           <input
             type="number"
             placeholder="Telefone"
+            value={telefone}
             onChange={e => setTelefone(e.target.value)}
           />
 
           <input
             type="text"
             placeholder="Cargo"
+            value={cargo}
             onChange={e => setCargo(e.target.value)}
           />
 
