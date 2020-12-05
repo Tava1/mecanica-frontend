@@ -3,7 +3,7 @@ import api from '../../services/api';
 
 import './styles.css'
 
-export default function Menu() {
+export default function ListarClientes() {
 
   const [clientes, setClientes] = useState([]);
 
