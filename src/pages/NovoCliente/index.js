@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import api from '../../services/api';
 
+import SideBar from '../../components/SideBar';
+import Hero from '../../components/Hero';
+
+
 import './styles.css'
 
 export default function NovoCliente() {
@@ -32,34 +36,60 @@ export default function NovoCliente() {
     }
   }
   return (
-    <div className="">
-      <section className="form">
+    <div id="page-novo-cliente">
+      <SideBar page="Cliente"></SideBar>
 
-        <form onSubmit={criarNovoCliente}>
-          <input
-            type="text"
-            placeholder="Nome do cliente"
-            value={nome}
-            onChange={e => setNome(e.target.value)}
-          />
+      <div className="page-content">
+        <Hero page="Cliente"></Hero>
+        <section className="section-inputs">
+          <form onSubmit={criarNovoCliente}>
+            <div className="group-inputs">
+              <div className="form-group">
+                <div className="form-group-inputs-context">
+                  <label htmlFor="nome">Nome</label>
 
-          <input
-            type="number"
-            placeholder="CPF"
-            value={cpf}
-            onChange={e => setCpf(e.target.value)}
-          />
+                  <input
+                    name="nome"
+                    type="text"
+                    placeholder="Nome do cliente"
+                    value={nome}
+                    onChange={e => setNome(e.target.value)}
+                  />
+                </div>
 
-          <input
-            type="number"
-            placeholder="Telefone"
-            value={telefone}
-            onChange={e => setTelefone(e.target.value)}
-          />
+                <div className="form-group-inputs-context">
+                  <label htmlFor="cpf">CPF</label>
+                  <input
+                    name="cpf"
+                    type="number"
+                    placeholder="CPF"
+                    value={cpf}
+                    onChange={e => setCpf(e.target.value)}
+                  />
+                </div>
+              </div>
 
-          <button type="submit">Cadastrar</button>
-        </form>
-      </section>
+              <div className="form-group">
+                <div className="form-group-inputs-context">
+                  <label htmlFor="cpf">Telefone</label>
+                  <input
+                    type="number"
+                    placeholder="Telefone"
+                    value={telefone}
+                    onChange={e => setTelefone(e.target.value)}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="group-buttons">
+              <button className="btn-generic" type="submit">Cancelar</button>
+              <button className="btn-save" type="submit">Cadastrar</button>
+            </div>
+
+          </form>
+        </section>
+      </div>
     </div >
   );
 }
