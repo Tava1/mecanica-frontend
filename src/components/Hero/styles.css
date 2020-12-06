@@ -1,0 +1,29 @@
+#hero-page {
+  width: 100%;
+  background: #2A2A2A;
+}
+
+#hero-page .hero-brand {
+  height: 300px;
+  width: 100%;
+  text-align: center;
+}
+
+#hero-page .hero-brand h2{
+  color: #B3221B;
+  font-size: 7em;
+  font-weight: bold;
+}
+
+#hero-page .hero-brand p{
+  color: #000;
+  background: #B3221B;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+#hero-page .hero-current-page h3 {
+  padding: 1em;
+  color: #fff;
+  font-size: 26px;
+}

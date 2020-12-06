@@ -1,0 +1,15 @@
+#page-novo-veiculo {
+  display: flex;
+}
+
+#page-novo-veiculo .page-content {
+  width: 100%;
+}
+
+#page-novo-veiculo .page-content .section-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  height: 50%;
+}

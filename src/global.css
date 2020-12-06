@@ -1,0 +1,73 @@
+@import url(https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+body,
+input,
+button,
+textarea {
+  font: 500 1.6rem monospace;
+}
+
+input {
+  border-radius: 4px;
+  padding: 7px;
+  width: 450px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color:#ffffff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+form .form-group {
+  display: flex;
+}
+
+form .group-inputs .form-group .form-group-inputs-context {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5em;
+}
+
+button {
+  border-radius: 4px;
+  padding: 10px 16px;
+  margin-left: 0.5em;
+  cursor: pointer;
+  border: none;
+  width: 200px;
+}
+
+.btn-save {
+  background: #B3221B;
+  color: #fff;
+}
+
+.btn-generic {
+  background: #2A2A2A;
+  color: #fff;
+}
