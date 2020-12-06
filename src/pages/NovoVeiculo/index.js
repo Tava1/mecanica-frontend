@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import api from '../../services/api';
 
+import SideBar from '../../components/SideBar';
+import Hero from '../../components/Hero';
+
+
 import './styles.css'
 
 export default function NovoVeiculo() {
@@ -36,49 +40,73 @@ export default function NovoVeiculo() {
     }
   }
   return (
-    <div className="">
-      <section className="form">
+    <div id="page-novo-veiculo">
+      <SideBar page="Veículo"></SideBar>
+      <div className="page-content">
+        <Hero page="Veículo"></Hero>
+        <section className="section-inputs">
+          <form onSubmit={criarNovoVeiculo}>
+            <div className="group-inputs">
+              <div className="form-group">
+                <div className="form-group-inputs-context">
+                  <label htmlFor="nome">CPF</label>
+                  <input
+                    type="CFP do Cliente"
+                    placeholder="xxx.xxx.xxx-xx"
+                    value={cpfCliente}
+                    onChange={e => setCpfCliente(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="form-group">
+                <div className="form-group-inputs-context">
+                  <label>Marca</label>
+                  <input
+                    type="text"
+                    placeholder="Ex: Ford, Volkswagen"
+                    value={marca}
+                    onChange={e => setMarca(e.target.value)}
+                  />
+                </div>
+                <div className="form-group-inputs-context">
+                  <label>Modelo</label>
+                  <input
+                    type="text"
+                    placeholder="Ex: Fusion, Fiesta"
+                    value={modelo}
+                    onChange={e => setModelo(e.target.value)}
+                  />
+                </div>
+              </div>
+              <div className="form-group">
+                <div className="form-group-inputs-context">
+                  <label htmlFor="nome">Ano do veículo</label>
+                  <input
+                    type="number"
+                    placeholder="Ex: 2020"
+                    value={ano}
+                    onChange={e => setAno(e.target.value)}
+                  />
+                </div>
+                <div className="form-group-inputs-context">
+                  <label htmlFor="nome">Tipo do veículo</label>
+                  <input
+                    type="text"
+                    placeholder="Ex: Sedan, Hatch"
+                    value={tipoVeiculo}
+                    onChange={e => setTipoVeiculo(e.target.value)}
+                  />
+                </div>
+              </div>
+            </div>
 
-        <form onSubmit={criarNovoVeiculo}>
-
-          <input
-            type="CFP do Cliente"
-            placeholder="CPF"
-            value={cpfCliente}
-            onChange={e => setCpfCliente(e.target.value)}
-          />
-
-          <input
-            type="text"
-            placeholder="Marca"
-            value={marca}
-            onChange={e => setMarca(e.target.value)}
-          />
-
-          <input
-            type="text"
-            placeholder="Modelo"
-            value={modelo}
-            onChange={e => setModelo(e.target.value)}
-          />
-
-          <input
-            type="number"
-            placeholder="Ano"
-            value={ano}
-            onChange={e => setAno(e.target.value)}
-          />
-
-          <input
-            type="text"
-            placeholder="Tipo do veículo"
-            value={tipoVeiculo}
-            onChange={e => setTipoVeiculo(e.target.value)}
-          />
-
-          <button type="submit">Cadastrar</button>
-        </form>
-      </section>
+            <div className="group-buttons">
+              <button className="btn-generic" type="submit">Cancelar</button>
+              <button className="btn-save" type="submit">Cadastrar</button>
+            </div>
+          </form>
+        </section>
+      </div>
     </div >
   );
 }
