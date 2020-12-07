@@ -1,8 +1,8 @@
-#page-lista-funcionario {
+#page-lista-cliente {
     display: flex;
 }
 
-#page-lista-funcionario .page-content {
+#page-lista-cliente .page-content {
     width: 100%;
 }
 
@@ -11,6 +11,7 @@
     justify-content:center;
     align-items:center;
     height: 400px;
+    margin-top: 1em;
 }
 
 .listTable table{

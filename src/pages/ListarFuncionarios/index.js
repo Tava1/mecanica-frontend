@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 import api from '../../services/api';
 import Hero from '../../components/Hero';
 import Sidebar from '../../components/SideBar';
@@ -21,6 +22,9 @@ export default function ListarFuncionarios() {
       <div className="page-content">
         <section className="listEmployee">
           <Hero page="Lista de funcionários" />
+          <Link to="/novo/funcionario">
+            <button>NOVO</button>
+          </Link>
           <div className="listTable">
             <table className="table">
 
