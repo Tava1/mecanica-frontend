@@ -1,0 +1,15 @@
+#page-novo-orcamento {
+  display: flex;
+}
+
+#page-novo-orcamento .page-content {
+  width: 100%;
+}
+
+#page-novo-orcamento .page-content .section-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  height: 50%;
+}
