@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Hero from '../../components/Hero';
+import Sidebar from '../../components/SideBar';
 
 import './styles.css'
 
@@ -14,22 +16,33 @@ export default function ListarClientes() {
   })
 
   return (
-    <div>
-      <section>
-        <ul>
-          {clientes.map(cliente => (
-            <li key={cliente.IdCliente}>
-              <strong>Nome:</strong>
-              <p>{cliente.nome}</p>
-              <strong>cpf:</strong>
-              <p>{cliente.cpf}</p>
-              <strong>telefone:</strong>
-              <p>{cliente.telefone}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
+    <div id="page-lista-cliente">
+      <Sidebar page="Listar Clientes" />
+      <div className="page-content">
+        <section className="listEmployee">
+          <Hero page="Lista de clientes" />
 
+          <div className="listTable">
+            <table className="table">
+
+              <thead>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+              </thead>
+
+              {clientes.map(cliente => (
+                <tbody key={cliente.IdCliente}>
+                  <td>{cliente.nome}</td>
+                  <td>{cliente.cpf}</td>
+                  <td>{cliente.telefone}</td>
+                </tbody>
+              ))}
+              
+            </table>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }
