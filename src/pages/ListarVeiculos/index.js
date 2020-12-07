@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import Hero from '../../components/Hero';
 import Sidebar from '../../components/SideBar';
@@ -21,7 +22,9 @@ export default function ListarVeiculos() {
       <div className="page-content">
         <section className="listEmployee">
           <Hero page="Lista de veiculos" />
-
+          <Link to="/novo/veiculo">
+            <button>NOVO</button>
+          </Link>
           <div className="listTable">
             <table className="table">
 
@@ -29,8 +32,6 @@ export default function ListarVeiculos() {
                 <th>Marca</th>
                 <th>Modelo</th>
                 <th>Ano</th>
-                <th>Tipo</th>
-                <th>Dono</th>
               </thead>
 
               {veiculos.map(veiculo => (
@@ -38,8 +39,6 @@ export default function ListarVeiculos() {
                   <td>{veiculo.marca}</td>
                   <td>{veiculo.modelo}</td>
                   <td>{veiculo.ano}</td>
-                  <td>{veiculo.tipoVeiculo}</td>
-                  <td>{veiculo.IdCliente}</td>
                 </tbody>
               ))}
 
