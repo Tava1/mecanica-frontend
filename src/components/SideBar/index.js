@@ -25,7 +25,7 @@ export default function SideBar(props) {
             <Link to="/veiculos">Veiculo</Link>
           </li>
           <li>
-            <Link to="/orcamento">Orçamento</Link>
+            <Link to="/orcamentos">Orçamento</Link>
           </li>
         </ul>
       </div>
