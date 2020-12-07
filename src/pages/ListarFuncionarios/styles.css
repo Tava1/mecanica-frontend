@@ -1,0 +1,47 @@
+#hero-page .hero-current-page h3 {
+    margin-top: 1.3em;
+    padding: 1em;
+    color: #fff;
+    font-size: 26px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.listTable{
+    position: relative;
+    bottom: 22em;
+    left: 17em;
+    width: 400px;
+}
+
+.listTable table{
+    border: 2px solid black;
+    border-spacing: 5px;
+    background-color: #dddd;
+    border-radius: 5px;
+}
+
+.listTable table{
+    padding:.3em 0;
+    width: 30em;
+}
+
+.listTable table th{
+    background-color: #2A2A2A;
+    font-weight: 100;
+    padding: .3em;
+    border-radius: 7px;
+    border: 1px solid black;
+    color:white;
+}
+
+.listTable table td{
+    text-align: center;
+    padding: .3em;
+    border-collapse: collapse;
+
+}
+
+.listTable table td:not(:first-child){
+    border-left: 1px solid black;
+}
