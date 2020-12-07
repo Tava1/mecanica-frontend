@@ -1,9 +1,12 @@
 import React from 'react';
+
 import foto01 from '../../imagens/001-avatar.svg';
 import foto02 from '../../imagens/002-businessman.svg';
 import foto03 from '../../imagens/003-sedan-car-front.svg';
 import foto04 from '../../imagens/004-currency.svg';
 import './styles.css'
+
+import SideBar from '../../components/SideBar'
 
 export default function Menu() {
 
