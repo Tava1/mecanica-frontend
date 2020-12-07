@@ -1,17 +1,16 @@
-#hero-page .hero-current-page h3 {
-    margin-top: 1.3em;
-    padding: 1em;
-    color: #fff;
-    font-size: 26px;
-    text-align: center;
-    text-transform: uppercase;
+#page-lista-funcionario {
+    display: flex;
+}
+  
+#page-lista-funcionario .page-content {
+    width: 100%;
 }
 
 .listTable{
-    position: relative;
-    bottom: 22em;
-    left: 17em;
-    width: 400px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 400px;
 }
 
 .listTable table{
