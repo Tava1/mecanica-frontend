@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Hero from '../../components/Hero';
+import Sidebar from '../../components/SideBar';
 
-import './styles.css'
+import './styles.css';
+
 
 export default function ListarFuncionarios() {
 
@@ -15,8 +18,30 @@ export default function ListarFuncionarios() {
 
   return (
     <div>
-      <section>
-        <ul>
+      <section className="listEmployee">
+        <Hero page="Lista de funcionários" />
+        <Sidebar />
+
+
+
+        <div className="listTable">
+          <table className="table">
+            <thead>
+              <th>Nome</th>
+              <th>Cpf</th>
+              <th>Telefone</th>
+              <th>Cargo</th>
+            </thead>
+            <tbody>
+              <td>Jill</td>
+              <td>Smith</td>
+              <td>5000-11</td>
+              <td>Teste</td>
+            </tbody>
+          </table>
+        </div>
+
+        {/* <ul>
           {funcionarios.map(funcionario => (
             <li key={funcionario.IdFuncionario}>
               <strong>Nome:</strong>
@@ -29,7 +54,7 @@ export default function ListarFuncionarios() {
               <p>{funcionario.cargo}</p>
             </li>
           ))}
-        </ul>
+        </ul> */}
       </section>
 
     </div>
