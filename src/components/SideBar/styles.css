@@ -1,0 +1,30 @@
+aside {
+  width: 400px;
+  height: 100vh;
+  background-color: #B3221B;
+  display: flex;
+  flex-direction: column;
+}
+
+aside .current-page {
+  color: white;
+  font-size: 1.2em;
+  width: 100%;
+  margin: 1em;
+}
+
+aside .menu-options {
+  margin: 1em 0;
+}
+
+aside .menu-options ul li {
+  padding: 0.7em;
+}
+
+aside .menu-options ul li a {
+  width: 100%;
+}
+
+aside .menu-options ul li:hover {
+  background-color: #680c07;
+}

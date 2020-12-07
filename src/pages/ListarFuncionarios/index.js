@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
+import Hero from '../../components/Hero';
+import Sidebar from '../../components/SideBar';
 
-import './styles.css'
+import './styles.css';
 
 export default function ListarFuncionarios() {
 
@@ -14,24 +16,34 @@ export default function ListarFuncionarios() {
   })
 
   return (
-    <div>
-      <section>
-        <ul>
-          {funcionarios.map(funcionario => (
-            <li key={funcionario.IdFuncionario}>
-              <strong>Nome:</strong>
-              <p>{funcionario.nome}</p>
-              <strong>cpf:</strong>
-              <p>{funcionario.cpf}</p>
-              <strong>telefone:</strong>
-              <p>{funcionario.telefone}</p>
-              <strong>cargo:</strong>
-              <p>{funcionario.cargo}</p>
-            </li>
-          ))}
-        </ul>
-      </section>
+    <div id="page-lista-funcionario">
+      <Sidebar page="Listar Funcionários" />
+      <div className="page-content">
+        <section className="listEmployee">
+          <Hero page="Lista de funcionários" />
+          <div className="listTable">
+            <table className="table">
 
+              <thead>
+                <th>Nome</th>
+                <th>Cpf</th>
+                <th>Telefone</th>
+                <th>Cargo</th>
+              </thead>
+
+              {funcionarios.map(funcionario => (
+                <tbody key={funcionario.IdFuncionario}>
+                  <td>{funcionario.nome}</td>
+                  <td>{funcionario.cpf}</td>
+                  <td>{funcionario.telefone}</td>
+                  <td>{funcionario.cargo}</td>
+                </tbody>
+              ))}
+
+            </table>
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

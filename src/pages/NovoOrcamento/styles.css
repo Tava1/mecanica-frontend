@@ -1,12 +1,12 @@
-#page-novo-cliente {
+#page-novo-orcamento {
   display: flex;
 }
 
-#page-novo-cliente .page-content {
+#page-novo-orcamento .page-content {
   width: 100%;
 }
 
-#page-novo-cliente .page-content .section-inputs {
+#page-novo-orcamento .page-content .section-inputs {
   width: 100%;
   display: flex;
   justify-content: center;

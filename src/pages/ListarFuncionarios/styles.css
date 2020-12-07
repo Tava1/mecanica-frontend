@@ -1,0 +1,46 @@
+#page-lista-funcionario {
+    display: flex;
+}
+  
+#page-lista-funcionario .page-content {
+    width: 100%;
+}
+
+.listTable{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    height: 400px;
+}
+
+.listTable table{
+    border: 2px solid black;
+    border-spacing: 5px;
+    background-color: #dddd;
+    border-radius: 5px;
+}
+
+.listTable table{
+    padding:.3em 0;
+    width: 30em;
+}
+
+.listTable table th{
+    background-color: #2A2A2A;
+    font-weight: 100;
+    padding: .3em;
+    border-radius: 7px;
+    border: 1px solid black;
+    color:white;
+}
+
+.listTable table td{
+    text-align: center;
+    padding: .3em;
+    border-collapse: collapse;
+
+}
+
+.listTable table td:not(:first-child){
+    border-left: 1px solid black;
+}

@@ -1,0 +1,15 @@
+#page-novo-funcionario {
+  display: flex;
+}
+
+#page-novo-funcionario .page-content {
+  width: 100%;
+}
+
+#page-novo-funcionario .page-content .section-inputs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+  height: 50%;
+}
